@@ -8,4 +8,14 @@ module.exports = (app) => {
 
   // firs time users are redirected here
   app.get('/auth/google/callback', passport.authenticate('google'));
+
+  app.get('/api/logout', (req, res) => {
+    // logout is attached to req by passport
+    req.logout();
+    res.send('logged out');
+  });
+
+  app.get('/api/current_user', (req, res) => {
+    res.send(req.user);
+  });
 }
