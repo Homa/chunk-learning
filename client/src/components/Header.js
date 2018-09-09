@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import Payments from './Payments';
 
 class Header extends Component {
 
@@ -9,15 +10,16 @@ class Header extends Component {
       case false:
         // not logged in
         return (
-          <a href="/auth/google">Login with Google</a>
+          <li><a href="/auth/google">Login with Google</a></li>
         );
       case null:
         // waithing for api call
         return;
       default:
-        return (
-          <a href="/api/logout">Log out</a>
-        );
+        return [
+          <li key="1"><Payments></Payments></li>,
+          <li key="2"><a href="/api/logout">Log out</a></li>
+        ];
     }
 
   }
@@ -27,7 +29,7 @@ class Header extends Component {
         <div className="nav-wrapper">
           <a href="#" className="brand-logo">Logo</a>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li>{this.renderContent()}</li>
+            {this.renderContent()}
           </ul>
         </div>
       </nav>
