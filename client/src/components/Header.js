@@ -18,16 +18,17 @@ class Header extends Component {
       default:
         return [
           <li key="1"><Payments></Payments></li>,
-          <li key="2"><a href="/api/logout">Log out</a></li>
+          <li key="2" style={{margin: '0 10px'}}>Credits: {this.props.auth.credits}</li>,
+          <li key="3"><a href="/api/logout">Log out</a></li>
         ];
     }
-
   }
+
   render() {
     return(
       <nav>
         <div className="nav-wrapper">
-          <a href="#" className="brand-logo">Logo</a>
+          <a href="/" className="brand-logo">Logo</a>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             {this.renderContent()}
           </ul>
