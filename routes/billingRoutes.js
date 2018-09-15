@@ -10,7 +10,7 @@ module.exports = app => {
       description: '$5 for credit',
       source: req.body.id
     });
-console.log('hello')
+
     req.user.credits += 5;
     const user = await req.user.save();
 
