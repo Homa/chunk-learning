@@ -1,10 +1,13 @@
 const express = require('express');
+const helmet = require('helmet')
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const bodyParser = require('body-parser');
 const app = express();
+
+app.use(helmet());
 
 app.use(bodyParser.json());
 
