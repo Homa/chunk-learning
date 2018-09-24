@@ -23,6 +23,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./models/User');
+require('./models/Deck');
 require('./services/passport')
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
