@@ -1,3 +1,4 @@
+import 'react-app-polyfill/ie11';
 import { combineReducers } from 'redux';
 import authReducer from './authReducer';
 

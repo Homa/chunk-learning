@@ -8,7 +8,11 @@ import Landing from './Landing';
 
 const Dashboard = () => <h2>Dashboard</h2>
 
-class App extends Component {
+interface IProps {
+  fetchUser: any;
+}
+
+class App extends Component<IProps> {
 
   componentDidMount() {
     this.props.fetchUser();

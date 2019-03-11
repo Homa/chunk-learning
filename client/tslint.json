@@ -1,0 +1,33 @@
+{
+  "extends": ["tslint:latest", "tslint-react", "tslint-react-hooks"],
+  "rules": {
+    "react-hooks-nesting": true,
+    "quotemark": [true, "single", "jsx-double"],
+    "indent": [true, "spaces"],
+    "ordered-imports": true,
+    "object-literal-sort-keys": false,
+    "member-access": [true, "no-public"],
+    "no-implicit-dependencies": false,
+    "jsx-wrap-multiline": false,
+    "jsx-alignment": false,
+    "no-submodule-imports": false,
+    "prefer-for-of": true,
+    "no-unused-variable": true,
+    "no-unused-expression": [true, "allow-fast-null-checks"],
+    "no-var-keyword": true,
+    "interface-name": [false, "always-prefix"],
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
+    "object-literal-key-quotes": false,
+    "trailing-comma": [
+      false,
+      {
+        "multiline": {
+          "objects": "always",
+          "arrays": "always",
+          "functions": "never",
+          "typeLiterals": "ignore"
+        }
+      }
+    ]
+  }
+}

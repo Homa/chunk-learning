@@ -3,7 +3,15 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import Payments from './Payments';
 
-class Header extends Component {
+interface IProps {
+  auth: any;
+}
+
+interface IState {
+  state: any
+}
+
+class Header extends Component<IProps, IState> {
 
   renderContent() {
     switch(this.props.auth) {
@@ -38,8 +46,8 @@ class Header extends Component {
   }
 }
 
-function mapStateToProps({auth}) {
-  return { auth };
+function mapStateToProps(state: IState) {
+  return state;
 }
 
 export default connect(mapStateToProps, actions)(Header);
