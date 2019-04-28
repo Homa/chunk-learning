@@ -8,13 +8,13 @@ interface IProps {
 }
 
 interface IState {
-  state: any
+  state: any;
 }
 
 class Header extends Component<IProps, IState> {
 
   renderContent() {
-    switch(this.props.auth) {
+    switch (this.props.auth) {
       case false:
         // not logged in
         return (
@@ -25,7 +25,7 @@ class Header extends Component<IProps, IState> {
         return;
       default:
         return [
-          <li key="1"><Payments></Payments></li>,
+          <li key="1"><Payments/></li>,
           <li key="2" style={{margin: '0 10px'}}>Credits: {this.props.auth.credits}</li>,
           <li key="3"><a href="/api/logout">Log out</a></li>
         ];

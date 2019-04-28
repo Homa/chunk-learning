@@ -6,6 +6,6 @@ export interface IUser {
 }
 
 export interface FetchUserAction {
-    type: typeof FETCH_USER
-    payload: IUser
+    type: typeof FETCH_USER;
+    payload: IUser;
 }

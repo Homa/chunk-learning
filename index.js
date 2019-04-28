@@ -27,6 +27,7 @@ require('./models/Deck');
 require('./services/passport')
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/deckRoutes')(app);
 
 mongoose.connect(keys.mongoURI).then(
   () => { console.log('successfully connected to mongo') },

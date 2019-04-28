@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t homa/chunk-learning -f Dockerfile.dev .
+
+script: 
+  - docker run homa/chunk-learning  npm run test -- --coverage
+
